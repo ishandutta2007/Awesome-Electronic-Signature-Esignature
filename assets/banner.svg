@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="seal-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.2" />
+    </linearGradient>
+
+    <linearGradient id="stroke-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+
+    <linearGradient id="card-border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.05" />
+    </linearGradient>
+
+    <!-- Radial Glows -->
+    <radialGradient id="glow-cyan" cx="20%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glow-indigo" cx="80%" cy="70%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="shadow-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#38bdf8" flood-opacity="0.25" />
+    </filter>
+
+    <filter id="card-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+
+    <style>
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.65; transform: scale(1.08); }
+      }
+      @keyframes penDraw {
+        0% { stroke-dashoffset: 800; opacity: 0.2; }
+        50% { stroke-dashoffset: 0; opacity: 1; }
+        100% { stroke-dashoffset: 0; opacity: 0.8; }
+      }
+      @keyframes floatCardSlow {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-8px) rotate(0.8deg); }
+      }
+      @keyframes floatCardReverse {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(7px) rotate(-0.8deg); }
+      }
+      @keyframes ringPulse {
+        0% { r: 65px; opacity: 0.8; }
+        50% { r: 76px; opacity: 0.2; }
+        100% { r: 65px; opacity: 0.8; }
+      }
+      @keyframes badgeShimmer {
+        0%, 100% { opacity: 0.8; }
+        50% { opacity: 1; }
+      }
+
+      .pulse-glow {
+        transform-origin: center;
+        animation: pulseGlow 6s ease-in-out infinite;
+      }
+      .pen-stroke {
+        stroke-dasharray: 800;
+        animation: penDraw 4.5s ease-in-out infinite alternate;
+      }
+      .float-1 {
+        animation: floatCardSlow 5s ease-in-out infinite;
+      }
+      .float-2 {
+        animation: floatCardReverse 6s ease-in-out infinite;
+      }
+      .seal-ring {
+        animation: ringPulse 4s ease-in-out infinite;
+      }
+      .badge-glow {
+        animation: badgeShimmer 3s ease-in-out infinite;
+      }
+
+      .font-sans {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      }
+    </style>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="420" rx="16" fill="url(#bg-grad)" />
+
+  <!-- Grid Pattern Overlay in Background -->
+  <g opacity="0.07" stroke="#94a3b8" stroke-width="1">
+    <line x1="0" y1="70" x2="1200" y2="70" />
+    <line x1="0" y1="140" x2="1200" y2="140" />
+    <line x1="0" y1="210" x2="1200" y2="210" />
+    <line x1="0" y1="280" x2="1200" y2="280" />
+    <line x1="0" y1="350" x2="1200" y2="350" />
+    <line x1="120" y1="0" x2="120" y2="420" />
+    <line x1="240" y1="0" x2="240" y2="420" />
+    <line x1="360" y1="0" x2="360" y2="420" />
+    <line x1="480" y1="0" x2="480" y2="420" />
+    <line x1="600" y1="0" x2="600" y2="420" />
+    <line x1="720" y1="0" x2="720" y2="420" />
+    <line x1="840" y1="0" x2="840" y2="420" />
+    <line x1="960" y1="0" x2="960" y2="420" />
+    <line x1="1080" y1="0" x2="1080" y2="420" />
+  </g>
+
+  <!-- Ambient Light Orbs (Background layer) -->
+  <circle cx="220" cy="110" r="280" fill="url(#glow-cyan)" class="pulse-glow" />
+  <circle cx="980" cy="280" r="320" fill="url(#glow-indigo)" class="pulse-glow" style="animation-delay: -3s;" />
+
+  <!-- DYNAMIC BACKGROUND ACCENTS (Subtle, strictly in deep background/margins) -->
+  <!-- Left Side Dynamic Background Card: Verified Document -->
+  <g class="float-1" transform="translate(60, 60)" opacity="0.6">
+    <rect width="160" height="210" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="url(#card-border-grad)" stroke-width="1.5" filter="url(#card-shadow)" />
+    <!-- Mini Doc Lines -->
+    <rect x="22" y="24" width="60" height="6" rx="3" fill="#38bdf8" opacity="0.8" />
+    <rect x="22" y="42" width="116" height="4" rx="2" fill="#475569" />
+    <rect x="22" y="54" width="96" height="4" rx="2" fill="#475569" />
+    <rect x="22" y="66" width="108" height="4" rx="2" fill="#475569" />
+    <rect x="22" y="78" width="84" height="4" rx="2" fill="#475569" />
+    <rect x="22" y="96" width="116" height="4" rx="2" fill="#475569" />
+    <rect x="22" y="108" width="70" height="4" rx="2" fill="#475569" />
+    <!-- Dynamic Simulated Digital Signature Path -->
+    <path d="M 24 160 Q 40 135 55 155 T 85 145 T 115 160 T 136 148" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" class="pen-stroke" />
+    <!-- Mini Verified Stamp -->
+    <rect x="22" y="172" width="65" height="18" rx="9" fill="#059669" fill-opacity="0.3" stroke="#10b981" stroke-width="1" />
+    <text x="54" y="184" fill="#34d399" font-size="8" font-weight="700" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">VERIFIED</text>
+  </g>
+
+  <!-- Right Side Dynamic Background Card: Cryptographic PKI Seal -->
+  <g class="float-2" transform="translate(980, 75)" opacity="0.65">
+    <rect width="160" height="210" rx="12" fill="#1e293b" fill-opacity="0.6" stroke="url(#card-border-grad)" stroke-width="1.5" filter="url(#card-shadow)" />
+    <!-- Cryptographic Shield & Circular Seals -->
+    <circle cx="80" cy="85" r="54" fill="none" stroke="#6366f1" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="4 4" />
+    <circle cx="80" cy="85" r="44" fill="url(#seal-grad)" class="seal-ring" />
+    <!-- Shield Icon in Centre -->
+    <path d="M 80 62 L 98 70 V 88 C 98 99 90 108 80 112 C 70 108 62 99 62 88 V 70 Z" fill="#4f46e5" fill-opacity="0.8" stroke="#818cf8" stroke-width="1.5" />
+    <path d="M 73 86 L 78 91 L 88 81" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Card Text -->
+    <text x="80" y="152" fill="#e2e8f0" font-size="11" font-weight="600" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">eIDAS &amp; ESIGN</text>
+    <text x="80" y="170" fill="#94a3b8" font-size="9" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">Tamper-Proof Audit</text>
+    <rect x="35" y="182" width="90" height="16" rx="8" fill="#4f46e5" fill-opacity="0.25" stroke="#6366f1" stroke-width="0.8" />
+    <text x="80" y="193" fill="#a5b4fc" font-size="8" font-weight="600" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">PAdES / PKI / QES</text>
+  </g>
+
+  <!-- Flowing Dynamic Signature Line Under Title (Midground, subtly curving) -->
+  <path d="M 320 236 C 450 250, 520 220, 640 240 C 760 260, 810 230, 880 242" fill="none" stroke="url(#stroke-grad)" stroke-width="3" stroke-linecap="round" opacity="0.4" class="pen-stroke" />
+
+  <!-- ======================================================== -->
+  <!-- FOREGROUND CONTENT: TITLE, SUBTITLE & BADGES -->
+  <!-- STRICTLY ON TOP AND PERFECTLY LEGIBLE -->
+  <!-- ======================================================== -->
+  <g id="foreground-content" class="font-sans">
+
+    <!-- Top Category Pill / Kicker -->
+    <g transform="translate(600, 78)">
+      <rect x="-140" y="-16" width="280" height="32" rx="16" fill="#1e293b" fill-opacity="0.85" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.5" filter="url(#shadow-glow)" />
+      <!-- Glowing dot -->
+      <circle cx="-116" cy="0" r="4.5" fill="#10b981" class="badge-glow" />
+      <text x="-104" y="4.5" fill="#e2e8f0" font-size="12" font-weight="600" letter-spacing="1">CURATED ECOSYSTEM DIRECTORY</text>
+    </g>
+
+    <!-- Main Title: AWESOME ELECTRONIC SIGNATURE -->
+    <text x="600" y="152" text-anchor="middle" font-size="44" font-weight="800" letter-spacing="-0.5" fill="url(#title-grad)" filter="url(#shadow-glow)">
+      Awesome Electronic Signature
+    </text>
+
+    <!-- Secondary Title / Descriptor -->
+    <text x="600" y="196" text-anchor="middle" font-size="20" font-weight="600" fill="#f8fafc" letter-spacing="0.2">
+      Top SaaS Platforms &amp; Open-Source Self-Hosted Solutions
+    </text>
+
+    <!-- Subtitle: Value Proposition -->
+    <text x="600" y="230" text-anchor="middle" font-size="14.5" font-weight="400" fill="#94a3b8" letter-spacing="0.1">
+      Digital Trust • Document Signing Workflows • ESIGN &amp; eIDAS Compliance • Open Alternatives
+    </text>
+
+    <!-- Interactive Badges Row (Bottom Foreground) -->
+    <g transform="translate(600, 312)">
+      <!-- Badge 1: SaaS Leaders -->
+      <g transform="translate(-310, 0)">
+        <rect x="-80" y="-16" width="160" height="32" rx="8" fill="#1e293b" fill-opacity="0.9" stroke="#3b82f6" stroke-width="1.2" />
+        <text x="0" y="5" text-anchor="middle" fill="#60a5fa" font-size="12" font-weight="600">☁️ SaaS Comparison</text>
+      </g>
+
+      <!-- Badge 2: Open Source Alternatives -->
+      <g transform="translate(-105, 0)">
+        <rect x="-95" y="-16" width="190" height="32" rx="8" fill="#1e293b" fill-opacity="0.9" stroke="#10b981" stroke-width="1.2" />
+        <text x="0" y="5" text-anchor="middle" fill="#34d399" font-size="12" font-weight="600">🔓 Self-Hosted &amp; FOSS</text>
+      </g>
+
+      <!-- Badge 3: Legal & Regulatory -->
+      <g transform="translate(100, 0)">
+        <rect x="-80" y="-16" width="160" height="32" rx="8" fill="#1e293b" fill-opacity="0.9" stroke="#8b5cf6" stroke-width="1.2" />
+        <text x="0" y="5" text-anchor="middle" fill="#c084fc" font-size="12" font-weight="600">⚖️ ESIGN • UETA • eIDAS</text>
+      </g>
+
+      <!-- Badge 4: Pricing & Free Limits -->
+      <g transform="translate(295, 0)">
+        <rect x="-85" y="-16" width="170" height="32" rx="8" fill="#1e293b" fill-opacity="0.9" stroke="#f59e0b" stroke-width="1.2" />
+        <text x="0" y="5" text-anchor="middle" fill="#fbbf24" font-size="12" font-weight="600">🏷️ Exact Pricing &amp; Limits</text>
+      </g>
+    </g>
+
+    <!-- Bottom Metadata Line -->
+    <text x="600" y="375" text-anchor="middle" font-size="12" font-weight="500" fill="#64748b" letter-spacing="0.5">
+      STAR RANKED REPOSITORIES • MARKET VALUATIONS • CONTINUOUSLY UPDATED
+    </text>
+  </g>
+</svg>
